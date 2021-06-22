@@ -1,10 +1,10 @@
+import 'package:flutter/widgets.dart';
+
 abstract class Action {
   final String id;
   final String type;
 
-  Future<void> perform(Map<String, dynamic> parameters);
+  Future<void> perform(BuildContext context, Map<String, dynamic> parameters);
 
-  Action(
-      {required this.id,
-      required this.type});
+  Action({required this.id, required this.type});
 }
